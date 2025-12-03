@@ -1,4 +1,4 @@
-# Title: COSC 111 Inventory Tracker
+# Title: COSC 111 Final Project: Inventory Tracker
 ## Author: Syed Taha Tanveer
 ## Version: Fall 2025
 
