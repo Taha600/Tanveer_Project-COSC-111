@@ -16,9 +16,7 @@ public class Tanveer_Project {
         Scanner input = new Scanner(System.in);
         boolean ActiveProgram = true;
 
-        // Below I have included some placeholders that may later be used for full functional testing
-        // Item[] items = new Item[10]; 
-        // int itemCount = 0;             
+                
 
         while (ActiveProgram) {
             //We will display the UI to the user so they know what different options they have
@@ -55,14 +53,14 @@ public class Tanveer_Project {
                     
 
                     //We will display which item was added
-                    // inventory.addItem(new Item(name, category, quantity));
+              
                     System.out.println("Item added");
                     break;
 
                 case 2:
                     // We will display all the items here 
 
-                    // inventory.printInventory();, this is a placeholder for the real thing 
+                    
                     System.out.println("Displaying items");
                     break;
 
