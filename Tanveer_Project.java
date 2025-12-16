@@ -104,7 +104,9 @@ public class Tanveer_Project {
                     break;
                 
                 case 4:
-
+                    //This case searches for an item that is given by the user
+                    //If the item isn't null then we let the user know that the item was found
+                    //Otherwise the item wasn't found
                     System.out.print("Enter the name of whichever item you want to search for: ");
                     String nameSearch = input.nextLine();
                     Item found = inventory.searchItem(nameSearch);
@@ -120,13 +122,13 @@ public class Tanveer_Project {
                     
                 case 5: 
 
-                    //Showing the statistics
+                    //Showing the statistics which includes quantitiy and the variety of items
                     System.out.println("Total different items: " + inventory.getItemCount());
                     System.out.println("Total quantity of all the items: " + inventory.getTotalQuantity());
                     break;
 
                 case 6:
-                    
+                    //We save the current inventory to a file according to the user
                     System.out.print("Enter the filename in which you want to save the information: ");
                     String filename = input.nextLine();
                     inventory.saveToFile(filename);
@@ -146,7 +148,7 @@ public class Tanveer_Project {
             }
         }
 
-        input.close();
+        input.close(); //We close the scanner
     }
 }
 
@@ -154,25 +156,119 @@ public class Tanveer_Project {
 
 Inventory Menu:
 1. Add new item
-2. Display all items
-3. Exit
+2. Remove item
+3. Display all items
+4. Search for an item
+5. See statistics
+6. Save inventory to a file
+7. Exit
 Enter your choice: 1
-Enter item name: Sprite
-Enter category: drink
-Enter quantity: 2
-Item added
+Enter item name: Chocolate
+Enter category: Snack
+Enter quantity: 7
+Item has been added successfully
 
 Inventory Menu:
 1. Add new item
-2. Display all items
-3. Exit
-Enter your choice: 2
-Displaying items
+2. Remove item
+3. Display all items
+4. Search for an item
+5. See statistics
+6. Save inventory to a file
+7. Exit
+Enter your choice: 1
+Enter item name: Chips
+Enter category: Snack
+Enter quantity: 3
+Item has been added successfully
 
 Inventory Menu:
 1. Add new item
-2. Display all items
-3. Exit
+2. Remove item
+3. Display all items
+4. Search for an item
+5. See statistics
+6. Save inventory to a file
+7. Exit
 Enter your choice: 3
+Displaying items
+Chocolate
+Category: Snack
+Quantity: 7
+Chips
+Category: Snack
+Quantity: 3
+
+Inventory Menu:
+1. Add new item
+2. Remove item
+3. Display all items
+4. Search for an item
+5. See statistics
+6. Save inventory to a file
+7. Exit
+Enter your choice: 5
+Total different items: 2
+Total quantity of all the items: 10
+
+Inventory Menu:
+1. Add new item
+2. Remove item
+3. Display all items
+4. Search for an item
+5. See statistics
+6. Save inventory to a file
+7. Exit
+Enter your choice: 4
+Enter the name of whichever item you want to search for: Chips
+Item found: 
+Chips
+Category: Snack
+Quantity: 3
+
+Inventory Menu:
+1. Add new item
+2. Remove item
+3. Display all items
+4. Search for an item
+5. See statistics
+6. Save inventory to a file
+7. Exit
+Enter your choice: 2
+Enter the name of the item that you want to remove: Chocolate
+Item removed successfully
+
+Inventory Menu:
+1. Add new item
+2. Remove item
+3. Display all items
+4. Search for an item
+5. See statistics
+6. Save inventory to a file
+7. Exit
+Enter your choice: 3
+Displaying items
+Chips
+Category: Snack
+Quantity: 3
+
+Inventory Menu:
+1. Add new item
+2. Remove item
+3. Display all items
+4. Search for an item
+5. See statistics
+6. Save inventory to a file
+7. Exit
+Enter your choice: 6
+Enter the filename in which you want to save the information: output.txt
+Inventory save to output.txt
+2. Remove item
+3. Display all items
+4. Search for an item
+5. See statistics
+6. Save inventory to a file
+7. Exit
+Enter your choice: 7
 Exiting the program*/
 
