@@ -16,7 +16,7 @@ public class Inventory {
 
     //We create an array variable to store items
     // count variable to keep track of number of items currently in the inventory
-    // We also have a constact value which is the max amount of items we will allow to be stores
+    // We also have a constant value which is the max amount of items we will allow to be stores
     private Item[] items;
     private int itemCount;
     private final int MAX_SIZE = 10;
@@ -109,7 +109,7 @@ public class Inventory {
         }
     }
 
-    //Lastly this method allows us to search for an item
+    //Lastly this method allows us to search for an item using linear search
     // By its name, it will return a value if the value is found
     //Otherwise this method will return null
     public Item searchItem(String name) {

@@ -42,6 +42,12 @@ public class Tanveer_Project {
             System.out.println("7. Exit");
 
             System.out.print("Enter your choice: ");
+            if (!input.hasNextInt()){
+                System.out.println("Invalid input. Please try to enter a number between 1 & 7");
+                // .nextLine() will clear out the invalid input from the user
+                input.nextLine();
+                continue;
+            }
             int choice = input.nextInt();
 
             // We go to a new line because of some code issue as if the user picks option 1
@@ -59,14 +65,35 @@ public class Tanveer_Project {
                     System.out.print("Enter item name: ");
                     String name = input.nextLine();
 
+                    if (name.isEmpty()) {
+                        System.out.println("Item name can't be empty");
+                        break;
+                    }
+
                     System.out.print("Enter category: ");
                     String category = input.nextLine();
 
+                    if (category.isEmpty()) {
+                        System.out.println("Category can't be empty");
+                        break;
+                    }
+
                     System.out.print("Enter quantity: ");
+
+                    if (!input.hasNextInt()) {
+                        System.out.println("Quantity should be a positive number");
+                        input.nextLine();
+                        break;
+                    }
+
                     int quantity = input.nextInt();
 
                     input.nextLine();
 
+                    if (quantity <= 0) {
+                        System.out.println("Quantity must be greater than zero");
+                        break;
+                    }
                             
                     //We will display which item was added
                     
@@ -86,6 +113,11 @@ public class Tanveer_Project {
                     String removeName = input.nextLine();
                     boolean removed = inventory.removeItem(removeName);
                     
+                    if (removeName.isEmpty()) {
+                        System.out.println("Item name can't be empty");
+                        break;
+                    }
+
                     if (removed) {
                         System.out.println("Item removed successfully");
                     }
@@ -111,8 +143,13 @@ public class Tanveer_Project {
                     String nameSearch = input.nextLine();
                     Item found = inventory.searchItem(nameSearch);
 
+                   if (nameSearch.isEmpty()) {
+                        System.out.println("Item name can't be empty");
+                        break;
+                    } 
+                    
                     if (found != null) {
-                        System.out.println("Item found: ");
+                        System.out.println(" Item found:");
                         System.out.println(found);
                     }
                     else{
@@ -131,6 +168,12 @@ public class Tanveer_Project {
                     //We save the current inventory to a file according to the user
                     System.out.print("Enter the filename in which you want to save the information: ");
                     String filename = input.nextLine();
+
+                    if (filename.isEmpty()) {
+                        System.out.println("Filename can't be empty");
+                        break;
+                    }
+
                     inventory.saveToFile(filename);
                     break;
                 
